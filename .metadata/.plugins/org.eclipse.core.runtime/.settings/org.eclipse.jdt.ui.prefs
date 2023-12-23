@@ -1,0 +1,10 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="prac_01.ArrayPrblm_3"><rhs name\="prac_01.ArrayPrblm_3"/></lhs><lhs name\="prac_01.StringSorting_01"><rhs name\="prac_01.StringSorting_01"/></lhs><lhs name\="prac_01.IntegerQuickSort"><rhs name\="prac_01.IntegerQuickSort"/></lhs><lhs name\="repeatPrac01.HeapSortAgain"><rhs name\="repeatPrac01.HeapSortAgain"/></lhs><lhs name\="repeatPrac01.HeapSortAgain_2"><rhs name\="repeatPrac01.HeapSortAgain_2"/></lhs><lhs name\="pckg_01.HeapSortAgain"><rhs name\="pckg_01.HeapSortAgain"/></lhs><lhs name\="star_patterns.WriteAndDelete"><rhs name\="star_patterns.WriteAndDelete"/></lhs><lhs name\="star_patterns.WriteAndDelete5"><rhs name\="star_patterns.WriteAndDelete5"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

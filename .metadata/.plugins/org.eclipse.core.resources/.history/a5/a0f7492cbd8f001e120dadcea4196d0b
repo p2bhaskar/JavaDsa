@@ -1,0 +1,37 @@
+package prac_01;
+
+public class CharacterCount {
+
+	public static void main(String[] args) 
+	{
+		String inputStr = "hello there how are you";
+		
+        String[] stArr = inputStr.split(" ");
+        String newStr = String.join("", stArr);
+        //System.out.println(newStr);
+        int[] countCharacters = CharacterCount.countChar(newStr);
+        
+        for(int i=0;i<countCharacters.length;i++) 
+        {
+        	if(countCharacters[i]>0) {
+        		char c = (char) i;
+        		
+        		System.out.println("character "+c+" appears "+i+" no. of times");
+        	}
+        }
+        
+		
+		
+		
+    }
+	
+	static int[] countChar(String str)
+	{
+		int[] countCharacter = new int[256];
+		for(char c:str.toCharArray()) {
+			countCharacter[(int)c]++;
+		}
+		return countCharacter;
+	}
+
+}

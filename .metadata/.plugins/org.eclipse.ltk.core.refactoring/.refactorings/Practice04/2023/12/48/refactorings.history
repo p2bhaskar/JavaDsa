@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ZeroSumSubarray.java&apos; to &apos;Practice04/src/pckg_01&apos;&#x0D;&#x0A;- Original project: &apos;Practice04&apos;&#x0D;&#x0A;- Destination element: &apos;Practice04/src/pckg_01&apos;&#x0D;&#x0A;- Original element: &apos;pckg_01.ZeroSumSubarray.java&apos;" description="Copy compilation unit" destination="/src&lt;pckg_01" element1="/src&lt;pckg_01{ZeroSumSubarray.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1701550951205" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,71 @@
+package pckg_01;
+
+public class HeapSortAgain 
+{
+
+	public static void main(String[] args) 
+	{
+		int[] arr= {35,23,12,31,10,-18,0,3}; 
+		
+		HeapSortAgain hsa = new HeapSortAgain();
+		hsa.sort(arr);
+		hsa.print(arr);
+		
+		
+		
+
+	}
+
+	private void print(int[] arr) {
+		for(int i:arr) {
+			System.out.print(i+" ");
+		}
+		
+	}
+
+	private void sort(int[] arr) 
+	{
+		
+		int n = arr.length;
+		
+		for(int i=n/2-1;i>=0;i--) {
+			heapify(arr,n,i);
+		}
+		
+		for(int i=n-1;i>0;i--) 
+		{
+			int temp =arr[n];
+			arr[n] = arr[0];
+			arr[0] =  temp;
+			
+			heapify(arr,i,0);
+			
+			
+		}
+		
+	}
+
+	private void heapify(int[] arr, int n, int i) 
+	{
+		int largest = i;
+		int leftChild = 2*i+1;
+		int rightChild = 2*i+2;
+		
+		if(n>leftChild && arr[leftChild]>arr[largest]) {
+			largest = leftChild;
+		}
+		if(n>rightChild && arr[rightChild]>arr[largest]) {
+			largest = rightChild;
+		}
+		if(largest != i) {
+			int temp = arr[i];
+			arr[i] = arr[largest] ;
+			arr[largest] = temp;
+			
+			heapify(arr,n,largest);
+		}
+		
+		
+	}
+
+}

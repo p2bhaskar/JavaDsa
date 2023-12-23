@@ -1,0 +1,31 @@
+package strPrac_01;
+
+public class AllPrimeFactors 
+{
+	public static void main(String[] args)
+	{
+		int n=900;
+		
+		primeFactors(n);
+	}
+
+	private static void primeFactors(int n)
+    {
+		int i=2;
+		
+		while(i*i <= n)
+		{
+			while(n%i == 0)
+			{
+				System.out.print(i+" ");
+				n=n/i;
+				
+			}
+			
+			i++;
+			
+		}
+		
+	}
+
+}

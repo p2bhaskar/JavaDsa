@@ -1,0 +1,34 @@
+package prac_01;
+
+public class CountAndSay
+{
+
+	public static void main(String[] args)
+	{ 
+	   String str = "ccccountandsssssayproblemmmm";
+	   String[] arr = str.split("");
+	   
+	   StringBuilder sb = new StringBuilder();
+	   for(int i=0;i<arr.length;i++)
+	      { 
+
+	        int count = 1;
+	        
+	       if(arr[i]!=arr[i+1])
+	        {
+	           sb.append(arr[i]).append(count);
+	           count=1;
+	        }
+	       else
+	       {
+	         count++;
+	       }
+	       
+	         
+	      }
+	      String s = sb.toString();
+	      System.out.println(s);
+	   
+	}
+
+}

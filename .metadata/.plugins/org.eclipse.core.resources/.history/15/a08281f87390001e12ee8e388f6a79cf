@@ -1,0 +1,15 @@
+package repeatPrac01;
+
+public class RandomPractice01 
+{
+     public static void main(String[] args) 
+     {
+		String str = "hello there how are you ??";
+		 
+		String str2 = str.replace("h","H");
+		System.out.println(str2);
+		
+		
+		
+	 }
+}

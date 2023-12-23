@@ -1,0 +1,20 @@
+package prac_01;
+
+public class CharacterCount {
+
+	public static void main(String[] args) 
+	{
+		String inputStr = "hello there how are you";
+		
+        String[] stArr = inputStr.split(" ");
+        String newStr = String.join("", stArr);
+        System.out.println(newStr);
+		
+		//int[] arr = new int[128];
+		
+		
+		
+
+	}
+
+}

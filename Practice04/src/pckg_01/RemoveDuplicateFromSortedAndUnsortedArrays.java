@@ -1,0 +1,37 @@
+package pckg_01;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class RemoveDuplicateFromSortedAndUnsortedArrays {
+	public static void main(String[] args) {
+
+		int[] arr = { 1, 2, 2, 3, 4, 5, 5, 5, 9, 9, 9 };
+
+		int j = 0;
+
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i] != arr[i + 1]) {
+				arr[j] = arr[i];
+				j++;
+
+			}
+		}
+
+		arr[j] = arr[(arr.length - 1)];
+		for (int i = 0; i < j + 1; i++) {
+			System.out.print(arr[i] + " ");
+		}
+
+		Set<Integer> set = new HashSet<>();
+
+		for (int i = 0; i < arr.length; i++) {
+
+			set.add(arr[i]);
+		}
+
+		System.out.println(set);
+
+	}
+
+}

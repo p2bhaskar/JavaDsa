@@ -1,0 +1,73 @@
+package prac_01;
+
+public class HeapSort 
+{
+   public static void main(String[] args)
+
+     {
+        int[] Arr = {56,12,34,9,20,13,13,100,-23,000};
+        HeapSort hs = new HeapSort();
+        hs.sort(Arr);
+        hs.print(Arr);
+     }
+   private void sort(int[] Arr)
+    {
+      int n = Arr.length;
+      for(int i = n/2-1;i>=0;i--)
+       {
+         heapify(Arr,n,i);
+       }
+      
+     for(int i =n-1;i>0;i--)
+       {
+          int temp = Arr[i];
+          Arr[i] =Arr[0];
+          Arr[0] =temp;
+         
+         heapify(Arr,i,0);
+       }
+
+
+    }
+
+void heapify(int[] Arr,int n,int i)
+   {
+     int largest = i;
+     int leftNodeChildIndex = 2*i+1;
+     int rightNodeChildIndex = 2*i+2;
+
+     if(leftNodeChildIndex<n && Arr[leftNodeChildIndex]>Arr[largest])
+      {
+        largest = leftNodeChildIndex;
+      }
+    if(rightNodeChildIndex<n && Arr[rightNodeChildIndex]>Arr[largest])
+     {
+       largest = rightNodeChildIndex;
+     }
+
+    if(largest != i)
+    {
+       int temp = Arr[i];
+       Arr[i] =Arr[largest];
+       Arr[largest] =temp;
+       
+      heapify(Arr,n,largest);
+       
+    }
+
+
+     
+   }
+
+void print(int[] Arr)
+  {
+
+     for(int i:Arr)
+        {
+          System.out.print(i+" ");
+        }
+
+  }
+
+
+}

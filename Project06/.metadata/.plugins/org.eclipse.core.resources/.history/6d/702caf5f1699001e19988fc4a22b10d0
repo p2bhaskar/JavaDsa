@@ -1,0 +1,24 @@
+package strPrac_01;
+
+public class RandomPractice 
+{
+   public static void main(String[] args) 
+   {
+	  String str = "AbbbcVVddMMLL";
+	  int[] arr = new int[256];
+	  
+	  for(char c:str.toCharArray()) 
+	  {
+		  arr[(int)c] +=1;
+		  System.out.println(arr[(int)c]);
+	  }
+	  
+	  for(int i=0;i<=str.length()-1;i++) {
+		  System.out.println("");
+		  if(arr[i] > 0) {
+			  System.out.print((char)i+ " : "+arr[i]);
+			  System.out.println("");
+		  }
+	  }
+   }
+}

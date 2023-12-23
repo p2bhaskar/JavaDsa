@@ -1,0 +1,45 @@
+package pckg_01;
+
+public class MinSubArrPrblm
+{
+	public static void main(String[] args)
+	{
+		int[] arr = {12,-2,4,-8,-2,-4,10,15,-16};
+		
+		int min_so_far = Integer.MAX_VALUE;
+		int min_till_here = 0;
+		
+		int s=0;
+		int start =0;//starting index of min subarray
+		int end = 0;//ending index of max subarray
+		
+		for(int i=0;i<arr.length;i++) 
+		{
+			min_till_here = min_till_here + arr[i];
+			
+			if(min_till_here < min_so_far) {
+				min_so_far = min_till_here;
+				
+				  start = s;
+				  end = i;
+			}
+			
+			if(min_till_here > arr[i]) {
+				min_till_here = arr[i];
+				min_so_far = min_till_here;
+				
+				  s = i;
+			}
+			
+			 
+			
+		}
+		System.out.print("Min subrray is [ "); 
+		  for(int i=start;i<=end;i++) {
+			  System.out.print(arr[i] +" ");
+		  }
+		  System.out.print(" ]  And sum of Min subrray is : " + min_so_far);
+		
+	}
+
+}

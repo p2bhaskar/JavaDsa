@@ -1,0 +1,81 @@
+package star_patterns;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class WriteAndDelete2
+{
+  public static void main(String[] args)
+  {
+	//int[] arr = {24,36,-16,9,0,4,3,21,-100,-10,200};
+	  int[] arr = {24,36,-16,};
+	
+	//int length = arr.length-1;
+	  WriteAndDelete2 wad = new WriteAndDelete2();
+	 
+	  int originalNum = 233323332;
+	  int num = 233323332;
+	  int result = 0;
+	  
+	  while(num>0) {
+		   int rem = num%10;
+		   result = result*10+rem;
+		   num = num/10;
+	  }
+	  if (originalNum == result) {
+		  System.out.println("yes pallindrome"+ originalNum +"=="+ result);
+	  }else {
+		  System.out.println("not pallindrome : "+ originalNum +"=/="+ result );
+	  };
+	  
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+private void maxSubArray(int[] arr) 
+{
+	int min_till_here = 0;
+	int min_so_far = Integer.MAX_VALUE;
+	
+	int indexTrack = 0;
+	int start = 0;
+	int end = 0;
+	
+	for(int i=0;i<arr.length;i++)
+	{
+		
+		min_till_here = min_till_here + arr[i];
+		
+		if(min_till_here < min_so_far) 
+		{
+			
+			min_so_far = min_till_here;
+			
+			start = indexTrack;
+			end = i;
+		}
+		if(min_till_here > 0) 
+		{
+			
+			min_till_here = 0;
+			
+			 indexTrack = i+1;
+			
+		}
+	}
+	
+	for(int i=start;i<=end;i++) {
+		System.out.print(arr[i] +" ");
+	}
+	
+}
+
+
+}

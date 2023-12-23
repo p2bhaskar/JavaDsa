@@ -1,0 +1,59 @@
+package star_patterns;
+
+public class WriteAndDelete
+{
+  public static void main(String[] args)
+  {
+	int[] arr = {24,36,-16,9,0,4,3,21,-100,-10,200};
+	
+	//int length = arr.length-1;
+	WriteAndDelete wad = new WriteAndDelete();
+	
+	 System.out.print("[ ");
+	 wad.maxSubArray(arr);
+	 System.out.print(" ]");
+	
+}
+
+
+
+private void maxSubArray(int[] arr) 
+{
+	int min_till_here = Integer.MAX_VALUE;
+	int min_so_far = 0;
+	
+	int indexTrack = 0;
+	int start = 0;
+	int end = 0;
+	
+	for(int i=0;i<arr.length;i++)
+	{
+		
+		min_till_here = min_till_here + arr[i];
+		
+		if(min_till_here < min_so_far) 
+		{
+			
+			min_so_far = min_till_here;
+			
+			start = indexTrack;
+			end = i;
+		}
+		if(min_till_here > 0) 
+		{
+			
+			min_till_here = 0;
+			
+			 indexTrack = i+1;
+			
+		}
+	}
+	
+	for(int i=start;i<=end;i++) {
+		System.out.print(arr[i] +" ");
+	}
+	
+}
+
+
+}

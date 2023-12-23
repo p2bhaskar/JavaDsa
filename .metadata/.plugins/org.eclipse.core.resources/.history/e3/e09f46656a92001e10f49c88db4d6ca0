@@ -1,0 +1,69 @@
+package star_patterns;
+
+public class WriteAndDelete
+{
+  public static void main(String[] args)
+  {
+	int[] arr = {24,36,-16,9,0,4,3,21,-100,0};
+	
+	int length = arr.length-1;
+	WriteAndDelete wad = new WriteAndDelete();
+	
+	wad.sort(arr,0,length);
+	wad.print(arr);
+	
+}
+
+
+
+private void sort(int[] arr,int low,int high)
+{
+	int pivot = partition(arr,low,high);
+	
+	if(pivot-1>low) {
+		sort(arr,low,pivot-1);
+	}
+	if(pivot<high) {
+		sort(arr,pivot-1,high);
+	}
+	
+	
+}
+
+
+
+private int partition(int[] arr, int low, int high) {
+	int pivotElement = arr[(low+high)/2];
+	
+	while(low<=high) {
+		
+		while(arr[low] < pivotElement) {
+			low++;
+		}
+		while(arr[high] > pivotElement) {
+			high--;
+		}
+		
+		if(low<=high) {
+			int temp = arr[low];
+			arr[low] = arr[high];
+			arr[high] = temp;
+			
+			high--;
+			low++;
+		}
+	}
+	return low;
+}
+
+
+
+private void print(int[] arr) {
+	for(int i:arr) {
+		System.out.print(i+" ");
+	}
+	
+}
+
+
+}

@@ -1,0 +1,38 @@
+package strPrac_01;
+
+public class ReverseString 
+{
+   public static void main(String[] args)
+   {
+	   String str = "Programming is Great";
+	   
+	   String[] strA = str.split(" "); 
+	   int end =strA.length-1;
+	   int start = 0;
+//	   while(start<=end)
+//	   {
+//		   
+//		   String temp = strA[start];
+//		   strA[start] = strA[end];
+//		   strA[end] = temp;
+//		   
+//		   start++;
+//		   end--;
+//	   }
+//	 String s = String.join("", strA);
+//	 System.out.println(s);
+	   
+	   StringBuilder sb = new StringBuilder();
+	   for(String s:strA) 
+	   {
+		   StringBuilder sbIn = new StringBuilder(s);
+		   
+		  // sbIn.append(s);
+		   sbIn.reverse().append(" ");
+		   sb.append(sbIn);
+	   }
+	   sb.reverse();
+	   String s = sb.toString();
+	   System.out.println(s);
+   }
+}

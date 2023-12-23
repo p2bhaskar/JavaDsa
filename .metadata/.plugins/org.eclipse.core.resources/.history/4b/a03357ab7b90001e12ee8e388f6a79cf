@@ -1,0 +1,34 @@
+package repeatPrac01;
+
+public class RandomPractice01 
+{
+     public static void main(String[] args) 
+     {
+		String str = "hello there how are you     ??";
+		 
+ //		String str2 = str.replace("h","H");
+//		System.out.println(str2);
+		
+		String[] strArr = str.split("\\s+");
+		
+		StringBuilder sb = new StringBuilder();
+		
+		//StringBuilder sb = new StringBuilder(str).reverse();
+		//System.out.println(sb.toString());//??     uoy era woh ereht olleh
+	
+		for(String s:strArr)
+		{
+			//System.out.print(s.replace((String.valueOf(s.charAt(0))),(String.valueOf(s.charAt(0))).toUpperCase())+" ");
+			//
+			
+			sb.append(s.substring(0, 1)).append(s.substring(1)).append(" ");
+			
+			//System.out.println(sb.reverse());
+		}
+		
+		  String newString = sb.toString();
+		  System.out.println(newString);
+		
+		
+	 }
+}

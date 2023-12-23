@@ -1,0 +1,23 @@
+package pckg_01;
+
+public class ReverseEveryLetterOfWordOfASentence {
+
+	public static void main(String[] args)
+	{
+		String str = "This is a car";
+		
+		String[] strArr = str.split("\\s+");
+		
+		StringBuilder sb = new StringBuilder();
+		
+		for(String s:strArr) 
+		{
+			sb.append(s).reverse().append(" ");
+		}
+		
+		String s = sb.toString();
+		System.out.println(s);
+
+	}
+
+}

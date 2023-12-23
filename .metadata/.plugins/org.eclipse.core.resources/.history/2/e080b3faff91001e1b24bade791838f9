@@ -1,0 +1,23 @@
+package pckg_01;
+
+public class FindMissingElementFromApSeries {
+
+	public static void main(String[] args) {
+		int[] apArr = {5,12,19,26,33,40,47,61};
+		
+		for(int i=0;i<apArr.length;i++) 
+		{
+			if(apArr[i+1] - apArr[i] != apArr[i+2] - apArr[i+1]) {
+				
+				int missingInt = apArr[i+1]+apArr[i+1] - apArr[i];
+				System.out.println( "Missing element is :"+missingInt );
+				break;
+			}
+			
+		}
+		
+		
+
+	}
+
+}
